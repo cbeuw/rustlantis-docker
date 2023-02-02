@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 jobs:
   docker:
@@ -19,4 +19,4 @@ jobs:
         uses: docker/build-push-action@v4.0.0
         with:
           push: true
-          tags: rustlantis-env:latest
+          tags: cbeuw/rustlantis-env:latest
