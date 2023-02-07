@@ -13,5 +13,5 @@ ENV CRANELIFT_DIR="/rustc_codegen_cranelift"
 # Build miri
 RUN git clone --depth=1 https://github.com/rust-lang/miri.git
 RUN cargo install rustup-toolchain-install-master
-RUN cd miri && ./miri toolchain && ./miri build --release
+RUN cd miri && ./miri toolchain && ./miri build --release && ./target/release/cargo-miri miri setup
 ENV MIRI_DIR="/miri"
